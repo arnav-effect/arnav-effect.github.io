@@ -109,14 +109,12 @@
     </form>
   </div>
     <script type="module">
-  // Import the functions you need from the SDKs you need
+  // Import the functions you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
 
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  // Firebase config
   const firebaseConfig = {
     apiKey: "AIzaSyDL1sp0DsyCFBA4lXSssT5tcSGWZTomTXw",
     authDomain: "arnav-effect.firebaseapp.com",
@@ -130,36 +128,37 @@
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
+
+  // ✅ Initialize Firestore
+  const db = getFirestore(app);
+
+  // ✅ Form handling
+  document.getElementById("magnetForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const email = document.getElementById("email").value;
+
+    try {
+      await addDoc(collection(db, "magnet1"), {
+        name,
+        phone,
+        email,
+        timestamp: new Date()
+      });
+
+      // Success message
+      document.getElementById("successMsg").style.display = "block";
+      document.getElementById("errorMsg").style.display = "none";
+
+      // ✅ Redirect to PDF
+      window.location.href = "your-pdf-link.pdf";
+
+    } catch (error) {
+      console.error("Error adding document: ", error);
+      document.getElementById("errorMsg").style.display = "block";
+    }
+  });
 </script>
-<script>
-    // Form handling
-    document.getElementById("magnetForm").addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const name = document.getElementById("name").value;
-      const phone = document.getElementById("phone").value;
-      const email = document.getElementById("email").value;
-
-      try {
-        await db.collection("magnet1").add({
-          name,
-          phone,
-          email,
-          timestamp: new Date()
-        });
-
-        // ✅ Success
-        document.getElementById("successMsg").style.display = "block";
-        document.getElementById("errorMsg").style.display = "none";
-
-        // 🔹 Option 1: Redirect to PDF
-        window.location.href = "https://arnav-effect.github.io/assets/magnet/pdf/Viral_Tech_Business_Captions.pdf";
-
-        // 🔹 Option 2: Email via Cloud Functions (to be set up separately)
-      } catch (error) {
-        console.error("Error adding document: ", error);
-        document.getElementById("errorMsg").style.display = "block";
-      }
-    });
-  </script>
 </body>
 </html>
