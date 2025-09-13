@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Arnav</title>
+  <meta name="description" content="Contact form & socials.">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="container">
+    <h1>Contact</h1>
+    <p>If you'd like to work together, collaborate, or apply as a creator — send a message.</p>
+
+    <!-- Formspree example -->
+    <form id="contactForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="contact-form">
+      <label>
+        Name
+        <input type="text" name="name" required>
+      </label>
+
+      <label>
+        Email
+        <input type="email" name="_replyto" required>
+      </label>
+
+      <label>
+        Phone (optional)
+        <input type="tel" name="phone">
+      </label>
+
+      <label>
+        Enquiry Type
+        <select name="enquiry_type">
+          <option>Collab</option>
+          <option>Hire</option>
+          <option>Press</option>
+          <option>Creator</option>
+          <option>Other</option>
+        </select>
+      </label>
+
+      <label>
+        Message
+        <textarea name="message" rows="6" required></textarea>
+      </label>
+
+      <label class="consent">
+        <input type="checkbox" name="consent" required> I agree to the privacy policy.
+      </label>
+
+      <input type="hidden" name="_subject" value="New enquiry from website">
+      <button type="submit" class="btn btn-primary">Send message</button>
+    </form>
+
+    <section class="alt-contact">
+  <h2>Other ways to reach</h2>
+  <div class="contact-icons">
+    <a href="mailto:acromatic121@gmail.com.com" class="contact-item" aria-label="Email">
+      <div class="icon-circle">
+        <img src="https://s.magecdn.com/social/tc-mail.svg" alt="Email">
+      </div>
+      <span>Email</span>
+    </a>
+
+    <a href="https://instagram.com/arnav_effect" target="_blank" class="contact-item" aria-label="Instagram">
+      <div class="icon-circle">
+        <img src="https://s.magecdn.com/social/tc-instagram.svg" alt="Instagram">
+      </div>
+      <span>Instagram</span>
+    </a>
+
+    <a href="https://discord.com/users/1276765112014999557" target="_blank" class="contact-item" aria-label="Discord">
+      <div class="icon-circle">
+        <img src="https://s.magecdn.com/social/tc-discord.svg" alt="Discord">
+      </div>
+      <span>Discord</span>
+    </a>
+
+    <a href="https://x.com/Arnav_Mishra11" target="_blank" class="contact-item" aria-label="Twitter / X">
+      <div class="icon-circle">
+        <img src="https://s.magecdn.com/social/tc-x.svg" alt="Twitter / X">
+      </div>
+      <span>X (Twitter)</span>
+    </a>
+  </div>
+  <p class="response-time">Expected response time: Usually within 48 hours.</p>
+</section>
+
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="/assets/js/header-footer.js"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
