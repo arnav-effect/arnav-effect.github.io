@@ -13,11 +13,8 @@
         <a href="about.html">About</a>
         <a href="ventures.html">Ventures</a>
         <a href="projects.html">Projects</a>
-        <a href="Services.html">Services</a>
-        <a href="blog.html">Blog</a>
-        <a href="resources.html">Resources</a>
         <a href="contact.html">Contact</a>
-        <a href="apply-partner.html" class="cta">Work with Me</a>
+        <a href="contact.html" class="cta">Work with Me</a>
       </nav>
       <button id="mobile-nav-toggle">☰</button>
     </div>
@@ -33,9 +30,6 @@
         <p>Founder: Undefeatables — creator-first learning & practical projects.</p>
       </div>
       <div class="col links">
-        <a href="/services.html">Services</a><br>
-        <a href="/media.html">Media</a><br>
-        <a href="/newsletter.html">Newsletter</a><br>
         <a href="/legal.html">Privacy</a>
       </div>
       <div class="col contact">
@@ -94,3 +88,4 @@
     }
   });
 })();
+
