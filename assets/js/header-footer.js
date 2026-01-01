@@ -14,7 +14,7 @@
         <a href="ventures.html">Ventures</a>
         <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
-        <a href="contact.html" class="cta">Work with Me</a>
+        <a href="contact.html" class="cta">Collaborate</a>
       </nav>
       <button id="mobile-nav-toggle">☰</button>
     </div>
@@ -88,4 +88,5 @@
     }
   });
 })();
+
 
