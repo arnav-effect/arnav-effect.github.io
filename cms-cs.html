@@ -3,43 +3,121 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Cyber Mind Space - Collab-Project</title>
-  <meta name="description" content="Undefeatables — creator-led skill platform (early stage)." />
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <title>Cyber Mind Space — Project Overview</title>
+  <meta name="description" content="Cyber Mind Space: an educational platform for cybersecurity learning — project overview, responsibilities, architecture, and technical decisions." />
+  <link rel="stylesheet" href="/assets/css/styles.css"> 
 </head>
 <body>
   <div id="site-header"></div>
 
   <main class="container">
-    <header class="product-hero">
-      <h1>Cyber Mind Space</h1>
-      <p class="lead">Creator-led skill education subscription — practical, project-based lessons from creators. Early access / founding subscribers coming soon.</p>
-      <!--<a href="/newsletter.html" class="btn btn-primary">Join founding list</a>-->
-    </header>
+    <article class="project-page">
+      <header class="product-hero">
+        <h1>Cyber Mind Space</h1>
+        <p class="lead">Project Overview — cybersecurity learning platform: articles, resources, courses, and community engagement.</p>
+      </header>
 
-    <section class="how-it-works">
-      <h2>How it works</h2>
-      <ol>
-        <li><strong>Creators make concise, applied lessons</strong> — short modules focused on skills.</li>
-        <li><strong>Subscribers get monthly access</strong> — practical assignments and feedback loops.</li>
-        <li><strong>Community projects</strong> — apply what you learn with simple micro-projects.</li>
-      </ol>
-    </section>
+      <section id="overview">
+        <h2>Project Overview</h2>
+        <p>Cyber Mind Space is an educational platform focused on cybersecurity learning, articles, resources, and community engagement. I worked on this project as a Web Developer &amp; Technical Architect, responsible for designing and implementing the initial production-ready platform with strong emphasis on security, performance, and scalability within real-world constraints.</p>
+        <p>This project was built under shared hosting and limited backend access, which required careful architectural decisions.</p>
+      </section>
 
-    <section class="creators">
-      <h2>Featured creators</h2>
-      <p>Creator profiles and sample lessons will appear here. Accepting creator applications (partner page).</p>
-      <a href="/apply-partner.html" class="btn btn-ghost">Apply as creator</a>
-    </section>
+      <section id="scope">
+        <h2>Project Scope (Defined &amp; Owned)</h2>
+        <p>I clearly defined and owned the following scope:</p>
+        <ul>
+          <li>Static + dynamic web platform using HTML, CSS, JavaScript</li>
+          <li>Secure Firebase-based authentication</li>
+          <li>Content-driven architecture for: Articles, Courses, Resources</li>
+          <li>Client-friendly structure for future expansion</li>
+          <li>Security-first thinking despite shared hosting limitations</li>
+        </ul>
+      </section>
 
-    <section class="roadmap">
-      <h2>Roadmap</h2>
-      <ul>
-        <li>Founding subscribers & early feedback</li>
-        <li>Creator onboarding & sample courses</li>
-        <li>Paid subscription launch</li>
-      </ul>
-    </section>
+      <section id="responsibilities">
+        <h2>What I Was Responsible For</h2>
+
+        <h3>Architecture &amp; Tech Decisions</h3>
+        <ul>
+          <li>Designed the platform to work on shared hosting (Hostinger) without Node/Express servers</li>
+          <li>Selected Firebase for: Authentication, Firestore (data storage), Storage (media)</li>
+          <li>Designed separation between public content and authenticated user flows</li>
+        </ul>
+
+        <h3>Authentication &amp; Security</h3>
+        <ul>
+          <li>Implemented Firebase Authentication (Email/Password auth)</li>
+          <li>Enforced email verification and session-based access control</li>
+          <li>Protected sensitive pages using auth state checks and page-level access guards</li>
+          <li>Implemented Firestore Security Rules with role-based write access and user-isolated data access</li>
+          <li>Integrated Cloudflare for DNS, SSL, and basic DDoS/WAF protection</li>
+        </ul>
+
+        <h3>Frontend Development</h3>
+        <ul>
+          <li>Built pages using semantic HTML5, custom CSS (dark + cyber theme), and vanilla JavaScript</li>
+          <li>Created reusable UI patterns: article layouts, course cards, feature sections</li>
+          <li>Ensured responsive layout, SEO-friendly structure, and performance optimization</li>
+        </ul>
+
+        <h3>Content Management (Custom Solution)</h3>
+        <p>Designed a custom article creation system to allow admin-only article publishing. This PHP-based article generator dynamically injects content blocks (p, blockquote, tables, etc.) and structures articles so non-technical admins could publish content while keeping HTML consistent and secure.</p>
+
+        <h3>Security Testing &amp; Mitigation</h3>
+        <ul>
+          <li>Reviewed third-party security reports and identified platform limitations under shared hosting</li>
+          <li>Proposed a Zero-Trust architecture as a long-term solution</li>
+          <li>Documented what client-side security can and cannot protect and why backend mediation is required for true content protection</li>
+        </ul>
+      </section>
+
+      <section id="out-of-scope">
+        <h2>What Was Out of Scope (Intentionally)</h2>
+        <p>To avoid confusion, the following were explicitly out of my responsibility:</p>
+        <ul>
+          <li>React / Next.js redesign done later by another developer</li>
+          <li>Full backend with Node.js/Express on VPS (not available at that time)</li>
+          <li>Secure paid video streaming (requires server-side tokenization)</li>
+          <li>DRM-grade content protection (impossible on shared hosting)</li>
+        </ul>
+        <p>These limitations were clearly communicated to the client.</p>
+      </section>
+
+      <section id="deliverables">
+        <h2>What Was Delivered</h2>
+        <ul>
+          <li>Fully functional production website</li>
+          <li>Secure authentication system</li>
+          <li>Article &amp; resource platform</li>
+          <li>Admin-controlled content publishing workflow</li>
+          <li>Cloudflare-protected deployment</li>
+          <li>Scalable foundation ready for backend upgrade</li>
+        </ul>
+      </section>
+
+      <section id="takeaway">
+        <h2>Key Takeaway</h2>
+        <p>This project demonstrates my ability to work within real-world constraints, make correct architectural trade-offs, think like a security engineer (not just a frontend developer), and communicate limitations honestly while proposing future-proof solutions.</p>
+      </section>
+
+      <section id="future">
+        <h2>Future-Ready Vision (Proposed by Me)</h2>
+        <ul>
+          <li>Migrating backend logic to Firebase Functions / VPS</li>
+          <li>Using server-mediated APIs to hide credentials</li>
+          <li>Token-based media access (signed URLs)</li>
+          <li>Gradual transition to modern frameworks when time &amp; resources allow</li>
+        </ul>
+      </section>
+
+      <section id="role-tech">
+        <h2>Role &amp; Tech Stack</h2>
+        <p><strong>Role:</strong> Web Developer · Security-Focused Architect</p>
+        <p><strong>Tech Stack Used:</strong> HTML · CSS · JavaScript · Firebase Auth · Firestore · Firebase Storage · Cloudflare · PHP (content generation)</p>
+      </section>
+
+    </article>
   </main>
 
   <div id="site-footer"></div>
@@ -47,4 +125,3 @@
   <script src="/assets/js/main.js"></script>
 </body>
 </html>
-
