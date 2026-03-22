@@ -27,7 +27,10 @@
     <div class="footer-inner">
       <div class="col about">
         <strong>Arnav Mishra</strong>
-        <p>Founder: Undefeatables — creator-first learning & practical projects.</p>
+        <p>Entrepreneur<br>
+           Building Undefeatables & Veleriox Productions<br>
+           Shipping web & digital products<br>
+           15 | Tech × Business × Execution</p>
       </div>
       <div class="col links">
         <a href="/legal.html">Privacy</a>
