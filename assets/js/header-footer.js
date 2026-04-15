@@ -40,6 +40,7 @@
         <div style="margin-top:0.5rem">
           <a href="https://instagram.com/arnav.effect" aria-label="Instagram">Instagram</a> •
           <a href="https://x.com/Arnav_Mishra11" aria-label="X">X (Twitter)</a> •
+          <a href="https://github.com/its-acromatic" aria-label="GitHub">GitHub</a> •
           <a href="https://discord.com/users/1276765112014999557" aria-label="Discord">Discord</a>
         </div>
       </div>
