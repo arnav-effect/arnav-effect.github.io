@@ -38,7 +38,7 @@
       <div class="col contact">
         <a href="mailto:acromatic121@gmail.com">acromatic121@gmail.com</a>
         <div style="margin-top:0.5rem">
-          <a href="https://instagram.com/arnav_effect" aria-label="Instagram">Instagram</a> •
+          <a href="https://instagram.com/arnav.effect" aria-label="Instagram">Instagram</a> •
           <a href="https://x.com/Arnav_Mishra11" aria-label="X">X (Twitter)</a> •
           <a href="https://discord.com/users/1276765112014999557" aria-label="Discord">Discord</a>
         </div>
