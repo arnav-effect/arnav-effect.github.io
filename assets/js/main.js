@@ -23,12 +23,3 @@ document.addEventListener('DOMContentLoaded', function(){
     alert('Thanks for subscribing! Check your email for the guide.');
   }
 });
-
-// mobile nav toggle
-const toggle = document.getElementById('mobile-nav-toggle');
-if(toggle){
-  toggle.addEventListener('click', () => {
-    document.body.classList.toggle('nav-open');
-  });
-}
-

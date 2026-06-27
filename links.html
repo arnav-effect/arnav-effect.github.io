@@ -4,33 +4,48 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arnav — Links</title>
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
   <style>
     body {
       margin: 0;
-      font-family: "Segoe UI", sans-serif;
-      background: linear-gradient(135deg, #000000, #800000, blue);
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(110, 231, 255, 0.08), transparent 28%),
+        linear-gradient(180deg, #0b0b0d, #070709);
+      color: #f4f7fb;
       min-height: 100vh;
-      padding: 20px;
+      padding: 0;
     }
 
-    .profile {
+    .links-page {
+      min-height: calc(100vh - 140px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      margin-bottom: 20px;
+      padding: 3rem 1.5rem 2rem;
+    }
+
+    .links-page .profile {
+      text-align: center;
+      margin-bottom: 24px;
+      padding: 1.4rem 1.6rem;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+      box-shadow: 0 18px 45px rgba(0,0,0,0.3);
+      max-width: 620px;
     }
 
     .profile img {
       width: 120px;
       height: 120px;
       border-radius: 50%;
-      border: 4px solid #fff;
+      border: 1px solid rgba(255,255,255,0.12);
       object-fit: cover;
       margin-bottom: 10px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.25);
     }
 
     .name {
@@ -41,32 +56,35 @@
 
     .bio {
       font-size: 0.95rem;
-      color: #ddd;
+      color: #9aa4aa;
       max-width: 450px;
       margin: auto;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     .links-container {
       width: 100%;
       max-width: 500px;
-      margin-top: 30px;
+      margin-top: 20px;
     }
 
     .link-card {
-      background: #fff;
-      color: #000;
-      border-radius: 12px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02));
+      color: #f4f7fb;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
       padding: 15px 20px;
       margin: 15px 0;
       text-decoration: none;
       display: block;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      box-shadow: 0 18px 45px rgba(0,0,0,0.25);
     }
 
     .link-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+      border-color: rgba(110, 231, 255, 0.35);
+      box-shadow: 0 20px 48px rgba(0,0,0,0.3);
     }
 
     .link-title {
@@ -77,42 +95,32 @@
 
     .link-desc {
       font-size: 0.9rem;
-      color: #555;
-    }
-
-    .cta-btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background: #000;
-      color: #fff;
-      border-radius: 20px;
-      text-align: center;
-      font-weight: 600;
-      transition: background 0.2s ease;
-    }
-
-    .cta-btn:hover {
-      background: #444;
+      color: #9aa4aa;
     }
 
     .socials {
-      margin-top: 25px;
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.65rem;
     }
 
     .socials a {
-      margin: 0 10px;
-      font-size: 1.4rem;
-      color: #fff;
+      color: #f4f7fb;
       text-decoration: none;
-      transition: color 0.2s;
+      padding: 0.55rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.03);
+      transition: color 0.2s ease, background 0.2s ease;
     }
 
     .socials a:hover {
-      color: #ff4d4d;
+      color: #6ee7ff;
+      background: rgba(255,255,255,0.06);
     }
 
-    /* Base styles already ache hain, ab responsive add */
 @media (max-width: 768px) {
   body {
     padding: 15px;
@@ -148,11 +156,6 @@
   .link-desc {
     font-size: 0.85rem;
   }
-
-  .cta-btn {
-    padding: 8px 15px;
-    font-size: 0.85rem;
-  }
 }
 
 @media (max-width: 480px) {
@@ -169,34 +172,26 @@
     font-size: 0.8rem;
     line-height: 1.4;
   }
-
-  .socials {
-    margin-top: 20px;
-  }
-
-  .socials a {
-    font-size: 1.2rem;
-    margin: 0 8px;
-  }
 }
 
   </style>
 </head>
 <body>
-  <!-- Profile -->
-  <div class="profile">
-    <img src="assets/images/face-placeholder.png" alt="Profile picture" />
-    <div class="name">Arnav Mishra</div>
-    <div class="bio">
-      Entrepreneur<br>
-      Building Undefeatables & Veleriox Productions<br>
-      Shipping web & digital products<br>
-      15 | Tech × Business × Execution
-    </div>
-  </div>
+  <div id="site-header"></div>
 
-  <!-- Links Section -->
-  <div class="links-container">
+  <main class="container links-page">
+    <div class="profile">
+      <img src="assets/images/face-placeholder.png" alt="Profile picture" />
+      <div class="name">Arnav Mishra</div>
+      <div class="bio">
+        Entrepreneur<br>
+        Building Undefeatables & Veleriox Productions<br>
+        Shipping web & digital products<br>
+        15 | Tech × Business × Execution
+      </div>
+    </div>
+
+    <div class="links-container">
     <a href="https://arnav-effect.github.io" class="link-card">
       <div class="link-title">Website</div>
       <div class="link-desc">Explore my projects, ideas & collaborations.</div>
@@ -211,14 +206,16 @@
     </a>-->
   </div>
 
-  <!-- Socials -->
-  <div class="socials">
-    <a href="https://instagram.com/arnav.effect" target="_blank" class="contact-item" aria-label="Instagram">
-      <div class="icon-circle">
-        <img src="https://s.magecdn.com/social/tc-instagram.svg" alt="Instagram">
-      </div>
-      <span>Instagram</span>
-    </a>
-  </div>
+    <div class="socials">
+      <a href="https://instagram.com/arnav.effect" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://x.com/Arnav_Mishra11" target="_blank" rel="noopener noreferrer">X</a>
+      <a href="https://github.com/its-acromatic" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/arnav-effect/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/header-footer.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
