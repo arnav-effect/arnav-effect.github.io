@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your guide is ready</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #0b1020, #070709);
+      color: #f4f7fb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .download-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 18px;
+      max-width: 520px;
+      width: 100%;
+      padding: 2rem;
+      box-shadow: 0 18px 44px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 2rem;
+    }
+
+    p {
+      color: rgba(244,247,251,0.8);
+      line-height: 1.75;
+    }
+
+    .note {
+      margin-top: 1.5rem;
+      color: rgba(244,247,251,0.7);
+      font-size: 0.95rem;
+    }
+
+    .action-link {
+      display: inline-flex;
+      padding: 0.95rem 1.45rem;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #6ee7ff, #c59d5f);
+      color: #071018;
+      text-decoration: none;
+      font-weight: 700;
+      margin-top: 1.25rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="download-card">
+    <h1>Preparing your guide…</h1>
+    <p id="message">Checking access before redirecting to the download.</p>
+    <a id="retry" class="action-link" href="magnet1.html" style="display:none;">Back to request form</a>
+    <p class="note">If this page was opened directly, you must request access from the form again.</p>
+  </div>
+
+  <script>
+    const PDF_URL = './pdf/Viral_Tech_Business_Captions.pdf';
+    const ACCESS_KEY = 'magnetAccess';
+    const timeout = 1000;
+
+    const message = document.getElementById('message');
+    const retry = document.getElementById('retry');
+
+    const accessValue = sessionStorage.getItem(ACCESS_KEY);
+    if (!accessValue) {
+      message.textContent = 'Access denied. Please use the form on the request page to generate a valid download session.';
+      retry.style.display = 'inline-flex';
+    } else {
+      message.textContent = 'Access confirmed. Redirecting to your guide now…';
+      setTimeout(() => {
+        sessionStorage.removeItem(ACCESS_KEY);
+        window.location.replace(PDF_URL);
+      }, timeout);
+    }
+  </script>
+</body>
+</html>
