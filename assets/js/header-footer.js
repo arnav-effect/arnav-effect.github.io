@@ -4,7 +4,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a href="/" class="brand">
-        <div class="avatar-placeholder"></div>
+        <!-- <div class="avatar-placeholder"></div> -->
         <span class="brand-name">Arnav Mishra</span>
       </a>
 
